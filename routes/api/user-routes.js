@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {
   getAllUsers,
-  getUserByID,
+  getUserById,
   createUser,
   updateUser,
   deleteUser,
@@ -11,7 +11,7 @@ const {
 
 router.Route('/').get(getAllUsers).post(createUser);
 
-router.Route('/:id').get(getUserByID).put(updateUser).delete(deleteUser);
+router.Route('/:id').get(getUserById).put(updateUser).delete(deleteUser);
 
 router.Route('/:id/friends/:friendID').post(addFriend).delete(deleteFriend);
 

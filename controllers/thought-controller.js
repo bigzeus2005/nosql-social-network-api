@@ -22,7 +22,7 @@ module.exports = {
           { _id: req.body.userId },
           {
             $addToSet: {
-              thoughts: thoughtData._id
+              thoughts: thought._id
             }
           },
           { new: true, }
