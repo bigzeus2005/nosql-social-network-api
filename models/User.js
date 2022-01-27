@@ -13,7 +13,7 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       validate: {
-        validator: function(email) {
+        validator: function (email) {
           return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(email);
           // pulled from previous hw
         },
@@ -42,7 +42,7 @@ const userSchema = new Schema(
 );
 
 userSchema.virtual('friendcount').get(function () {
-  return this.freinds.length;
+  return this.friends.length;
 });
 
 const User = model('user', userSchema);

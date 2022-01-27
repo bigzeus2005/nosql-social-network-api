@@ -18,7 +18,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: Date.toLocaleString('en-US'),
+      get: date => (date.toLocaleString('en-US')),
     },
   },
   {
